@@ -17,8 +17,8 @@ Grab the latest build from the [Releases](../../releases/latest) page.
 | macOS, Apple silicon | `Toolbox-<version>-arm64.dmg` |
 | macOS, Intel | `Toolbox-<version>.dmg` |
 | Windows, x64 and arm64 | `Toolbox-Setup-<version>.exe` |
-| Linux, x86_64 | `toolbox-<version>-x86_64.AppImage` |
-| Linux, arm64 | `toolbox-<version>-arm64.AppImage` |
+| Linux, x86_64 | `toolbox-<version>-x86_64.AppImage` or `toolbox_<version>_amd64.deb` |
+| Linux, arm64 | `toolbox-<version>-arm64.AppImage` or `toolbox_<version>_arm64.deb` |
 
 Every release ships a `SHA256SUMS` file. Check a download with
 `shasum -a 256 -c SHA256SUMS --ignore-missing` on macOS or Linux, or
@@ -38,7 +38,7 @@ SHA-256 against `SHA256SUMS` first if you want to be sure of what you have.
 ### Linux
 
 The AppImage needs to be executable once: `chmod +x toolbox-*.AppImage`.
-A `.deb` will join the AppImage once releases are built on Linux.
+The deb installs with `sudo dpkg -i toolbox_*.deb`.
 
 ## From a terminal
 
