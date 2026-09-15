@@ -45,7 +45,8 @@ The deb installs with `sudo dpkg -i toolbox_*.deb`.
 The installed app is also the `toolbox` command and an MCP server:
 
 ```
-toolbox                      # what tools exist
+toolbox                      # open the desktop app
+toolbox --help               # what tools exist
 toolbox convert --help       # the options for one tool
 toolbox --mcp                # serve the tools to an agent
 ```
