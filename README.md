@@ -1,7 +1,7 @@
 # Toolbox
 
 Four design tools in one app: logo packages, colour systems, type specimens
-and image conversion. macOS, Windows and Linux. Every tool also runs from a
+and image conversion. macOS and Linux. Every tool also runs from a
 terminal and over MCP.
 
 This repository holds the release builds. The app, its tools and the
@@ -10,30 +10,24 @@ command-line and MCP reference live at
 
 ## Download
 
+Starting with 1.1.0, releases support macOS and Linux. Windows builds are discontinued.
+
 Grab the latest build from the [Releases](../../releases/latest) page.
 
 | Platform | File |
 | --- | --- |
 | macOS, Apple silicon | `Toolbox-<version>-arm64.dmg` |
 | macOS, Intel | `Toolbox-<version>.dmg` |
-| Windows, x64 and arm64 | `Toolbox-Setup-<version>.exe` |
 | Linux, x86_64 | `toolbox-<version>-x86_64.AppImage` or `toolbox_<version>_amd64.deb` |
 | Linux, arm64 | `toolbox-<version>-arm64.AppImage` or `toolbox_<version>_arm64.deb` |
 
-Every release ships a `SHA256SUMS` file. Check a download with
-`shasum -a 256 -c SHA256SUMS --ignore-missing` on macOS or Linux, or
-`certutil -hashfile <file> SHA256` on Windows.
+Every release ships a `SHA256SUMS` file. Run `shasum -a 256 <file>` and compare
+the result with that file’s entry in `SHA256SUMS`.
 
 ### macOS
 
 Builds are signed with a Developer ID and notarized by Apple. Open the dmg
 and drag Toolbox to Applications.
-
-### Windows
-
-The installer is **not code-signed**, so SmartScreen shows "Windows protected
-your PC" the first time. Click **More info**, then **Run anyway**. Check the
-SHA-256 against `SHA256SUMS` first if you want to be sure of what you have.
 
 ### Linux
 
